@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="num">Num:
+</label>
+<input type="number" id="num" name="num" min="2"><br><br>
+</input>
+<button id="submit" name="submit" value="Submit" onclick="myFunction()">submit</button><br><br>
+<textarea id="PrimeNums" name="PrimeNums" rows="10"></textarea>
+<p id="demo"></p>
+<script>
+    function myFunction(){
+    var num = document.getElementById("num").value;
+
+        for(let i = 2; i<=num; i++){
+        if( i%2!=0 && i%3!=0 && i%5!=0 && i%7!=0 || i/2==1 || i/3==1 || i/5==1 || i/7==1){
+           document.getElementById("PrimeNums").innerHTML += i + "  ";
+           }
+
+        }
+
+    }
+</script>
+</body>
+</html>
